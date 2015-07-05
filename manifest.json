@@ -1,0 +1,23 @@
+{
+  "name": "Forvo Downloader",
+  "description": "Download records from forvo.com",
+  "version": "2.0",
+  "author": "Ivan Koyptko",
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "run_at" : "document_end",
+      "matches": ["http://forvo.com/*", "http://*.forvo.com/*"],
+      "js": ["jquery-2.1.4.min.js", "content_script.js"]
+    }
+  ],
+  "web_accessible_resources": ["d.png"],
+  "icons": {
+    "16": "icon-16.png",
+    "48": "icon-48.png",
+    "128": "icon-128.png"
+  },
+  "manifest_version": 2
+}
